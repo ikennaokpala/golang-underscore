@@ -1,5 +1,5 @@
 ```                __
-                  /\ \                                                       
+                  /\ \
  __  __    ___    \_\ \     __   _ __   ____    ___    ___   _ __    __	         __     ___
 /\ \/\ \ /' _ `\  /'_  \  /'__`\/\  __\/ ,__\  / ___\ / __`\/\  __\/'__`\      /'_ `\  / __`\
 \ \ \_\ \/\ \/\ \/\ \ \ \/\  __/\ \ \//\__, `\/\ \__//\ \ \ \ \ \//\  __/  __ /\ \L\ \/\ \L\ \
@@ -124,10 +124,12 @@ __Return__
 * bool - any of the values that pass a truth test `predicate`
 
 __Examples__
+NB: Remember to define the type of value and index.
+
 
 ```go
 arr := []int{ 1, 3 }
-ok := Any(arr, func (n, _ int) bool {
+ok := Any(arr, func (n int, _ int) bool {
 	return n % 2 == 0
 })
 if ok {
@@ -520,7 +522,7 @@ if v != nil {
 	// wrong
 }
 
-dict := map[int]string{	
+dict := map[int]string{
 	1: "a",
 	2: "b",
 	3: "c",
@@ -575,7 +577,7 @@ __Examples__
 ```go
 if Md5("123456") != "e10adc3949ba59abbe56e057f20f883e" {
 	// wrong
-}	
+}
 ```
 
 <a name="parseJson" />
@@ -1147,7 +1149,7 @@ __Return__
 __Examples__
 
 ```go
-dict := map[int]string{	
+dict := map[int]string{
 	1: "a",
 	2: "b",
 	3: "c",
